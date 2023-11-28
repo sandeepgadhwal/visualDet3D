@@ -32,6 +32,9 @@ def main(config:str="config/config.py",
     else:
         dataset_name = cfg.data.val_dataset
     dataset = DATASET_DICT[dataset_name](cfg, split_to_test)
+    dataset[0]
+    import pdb
+    pdb.set_trace()
 
     # Create the model
     detector = DETECTOR_DICT[cfg.detector.name](cfg.detector)

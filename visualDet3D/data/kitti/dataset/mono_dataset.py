@@ -179,6 +179,9 @@ class KittiMonoTestDataset(KittiMonoDataset):
         calib.image_shape = image.shape
         transformed_image, transformed_P2 = self.transform(
             image, p2=deepcopy(calib.P2))
+        
+        import pdb
+        pdb.set_trace()
 
         output_dict = {'calib': transformed_P2,
                        'image': transformed_image,
